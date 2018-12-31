@@ -1,0 +1,86 @@
+detail {
+
+    text-align: justify;
+    
+    ion-grid {
+        padding: 0;
+    }
+    
+    .illustration {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .illustration-down {
+        height: 60vh;
+        transition: height 0.3s linear;
+    }
+
+    .illustration-up {
+        height: 30vh;
+        transition: height 0.3s linear;
+    }
+
+    .recipe {
+        padding: 1em;
+        background-color: white;
+        position: absolute;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .recipe-down {
+        top: 56vh;
+        transition: top 0.3s linear;
+    }
+
+    .recipe-up {
+        top: 22vh;
+        overflow: scroll;
+        padding-bottom: 30vh;
+        height: -webkit-fill-available;
+        transition: top 0.3s linear;
+    }
+
+    .header-row {
+        ion-col {
+            color: grey;
+            font-weight: lighter;
+        }
+    }
+
+    .data-row {
+        ion-col {
+            font-size: 1.2em;
+            font-weight: 900;
+        }
+    }
+
+    .fab-down {
+        top: 52vh;
+        transition: top 0.3s linear;
+    }
+
+    .fab-up {
+        top: 19vh;
+        transition: top 0.3s linear;
+    }
+
+    h2 {
+        font-size: 1em;
+        color:grey;
+        font-weight: lighter;
+    }
+
+    h3 {
+        font-size: 1em;
+        color: grey;
+        margin-bottom: 0em;
+        font-weight: lighter;
+    }
+
+    ul {
+        padding-inline-start: inherit;
+        list-style-type: square;
+    }
+}

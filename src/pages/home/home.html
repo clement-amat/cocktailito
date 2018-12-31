@@ -1,14 +1,104 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      WOUAW 
+      Cocktailit'o
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+  <div>
+
+    <h2>Our bestsellers</h2>
+  </div>
+  <ion-slides pager>
+    <ion-slide>
+      <img class="slide-img" src="assets/imgs/s1.png">
+      <div class="slide-info">
+        <div class="slide-info-title">Black Cherry Breezer</div>
+        <div class="slide-info-details">Some details</div>
+      </div>
+    </ion-slide>
+  
+    <ion-slide>
+      <img class="slide-img" src="assets/imgs/s2.png">
+
+    </ion-slide>
+  
+  </ion-slides>
+
+  <div>
+    <h2>Recommended</h2>
+  </div>
+  <ion-scroll scrollX="true" style="white-space: nowrap;height: 240px" direction="x">
+    <ion-card (click)="go()">
+      <img src="assets/imgs/1.png" />
+
+      <ion-fab right top>
+        <button class="small-ion-fab" ion-fab color="trans" (click)="changeColor()">
+          <ion-icon class="small-fab" name="heart" [color]="buttonColor"></ion-icon>
+        </button>
+      </ion-fab>
+      <div class="card-info">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-9>
+              <div class="card-title">Mojito</div>
+              <div class="card-subtitle">A one-way salsa dance.</div>
+            </ion-col>
+            <ion-col col-3>
+              <ion-icon color="yellow" name="star"></ion-icon> 4.4
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/imgs/2.png" />
+
+      <ion-fab right top>
+        <button class="small-ion-fab" ion-fab color="trans" (click)="changeColor()">
+          <ion-icon class="small-fab" name="heart" [color]="buttonColor"></ion-icon>
+        </button>
+      </ion-fab>
+      <div class="card-info">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-9>
+              <div class="card-title">Litchi Flavour</div>
+              <div class="card-subtitle">Some description</div>
+            </ion-col>
+            <ion-col col-3>
+              <ion-icon color="yellow" name="star"></ion-icon> 4.4
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/imgs/3.png" />
+
+      <ion-fab right top>
+        <button class="small-ion-fab" ion-fab color="trans" (click)="changeColor()">
+          <ion-icon class="small-fab" name="heart" [color]="buttonColor"></ion-icon>
+        </button>
+      </ion-fab>
+      <div class="card-info">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-9>
+              <div class="card-title">Colored cocktail</div>
+              <div class="card-subtitle">Another description</div>
+            </ion-col>
+            <ion-col col-3>
+              <ion-icon color="yellow" name="star"></ion-icon> 4.4
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card>
+  </ion-scroll>
+
 </ion-content>
