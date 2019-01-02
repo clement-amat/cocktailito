@@ -1,14 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Cocktailit'o
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar primary>
+      <ion-buttons start>
+        <button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+  
+      <ion-title>
+        Cocktail'ito
+      </ion-title>
+  
+      <ion-buttons end>
+        <button (click)="searchButtonClick()" ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
 
 <ion-content class="card-background-page">
   <div>
-
     <h2>Our bestsellers</h2>
   </div>
   <ion-slides pager>

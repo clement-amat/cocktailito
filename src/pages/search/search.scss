@@ -1,0 +1,50 @@
+page-search {
+
+    .searchbar-md .searchbar-input {
+        box-shadow: none;
+    }
+
+    ion-card {
+        position: relative;
+        text-align: center;
+        border-radius: 12px;
+    
+        img {
+          object-fit: cover;
+          max-height: 40vh;
+        }
+      }
+    
+      .card-md, .card-ios {
+        border-radius: 12px;
+      }
+          
+      .card-title {
+        font-size: 1.4em;
+        width: 100%;
+        font-weight: bold;
+        color: black;
+        text-align: left;
+      }
+          
+      .card-subtitle {
+        font-size: 1.0em;
+        width: 100%;
+        color: grey;
+        text-align: left;
+      }
+    
+      .card-info {
+        font-family: 'Roboto', sans-serif;
+        padding: 1em;
+      }
+    
+      .small-fab {
+        font-size: 1.4em;
+      }
+    
+      .small-ion-fab {
+        width: 48px;
+        height: 48px;
+      }  
+}

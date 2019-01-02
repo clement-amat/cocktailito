@@ -8,13 +8,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListComponent } from '../components/list/list';
 import { DetailComponent } from '../components/detail/detail';
+import { SearchPage } from '../pages/search/search';
+import { Keyboard } from '@ionic-native/keyboard';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    SearchPage
   ],
   imports: [
     BrowserModule,
@@ -25,12 +28,14 @@ import { DetailComponent } from '../components/detail/detail';
     MyApp,
     HomePage,
     ListComponent, 
-    DetailComponent
+    DetailComponent,
+    SearchPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Keyboard
   ]
 })
 export class AppModule {}

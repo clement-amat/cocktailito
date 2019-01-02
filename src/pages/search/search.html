@@ -1,0 +1,45 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-searchbar   
+    #searchInput
+    [(ngModel)]="searchTerm" 
+    (ionInput)="onSearchInput($event)"
+    >
+    </ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let c of cocktails"  (click)="go()">
+    <img src="assets/imgs/1.png" />
+
+    <ion-fab right top>
+      <button class="small-ion-fab" ion-fab color="trans" (click)="changeColor()">
+        <ion-icon class="small-fab" name="heart" [color]="buttonColor"></ion-icon>
+      </button>
+    </ion-fab>
+    <div class="card-info">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-9>
+            <div class="card-title">Mojito</div>
+            <div class="card-subtitle">A one-way salsa dance.</div>
+          </ion-col>
+          <ion-col col-3>
+            <ion-icon color="yellow" name="star"></ion-icon> 4.4
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card>
+  
+</ion-content>
