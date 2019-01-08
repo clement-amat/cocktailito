@@ -10,6 +10,8 @@ import { ListComponent } from '../components/list/list';
 import { DetailComponent } from '../components/detail/detail';
 import { SearchPage } from '../pages/search/search';
 import { Keyboard } from '@ionic-native/keyboard';
+import { CocktailServiceProvider } from '../providers/cocktail-service/cocktail-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { Keyboard } from '@ionic-native/keyboard';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpClientModule,
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +38,8 @@ import { Keyboard } from '@ionic-native/keyboard';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Keyboard
+    Keyboard,
+    CocktailServiceProvider
   ]
 })
 export class AppModule {}

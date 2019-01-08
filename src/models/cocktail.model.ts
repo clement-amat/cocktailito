@@ -1,6 +1,6 @@
 export class CocktailItem {
-    name : string;
+    id : number;
+    title : string;
     description : string;
-    evaluation : number;
     picturePath : string;
 }

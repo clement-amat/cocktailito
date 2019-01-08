@@ -23,19 +23,13 @@
     <h2>Our bestsellers</h2>
   </div>
   <ion-slides pager>
-    <ion-slide>
-      <img class="slide-img" src="assets/imgs/s1.png">
+    <ion-slide *ngFor="let c of slideCocktails">
+      <img class="slide-img" src="{{c.picturePath}}">
       <div class="slide-info">
-        <div class="slide-info-title">Black Cherry Breezer</div>
-        <div class="slide-info-details">Some details</div>
+        <div class="slide-info-title">{{c.title}}</div>
+        <div class="slide-info-details">{{c.description}}</div>
       </div>
     </ion-slide>
-  
-    <ion-slide>
-      <img class="slide-img" src="assets/imgs/s2.png">
-
-    </ion-slide>
-  
   </ion-slides>
 
   <div>

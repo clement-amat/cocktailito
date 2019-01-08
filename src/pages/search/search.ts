@@ -44,9 +44,8 @@ export class SearchPage {
   onSearchInput() {
     // trigger search
     if (this.searchTerm) {
-      this.cocktails.push({name: "Mojito", 
+      this.cocktails.push({title: "Mojito", 
         description : "A on way salsa dance",
-        evaluation : 4.2,
         picturePath: "../../assets/imgs/1.png"
       } as CocktailItem);
     } else {

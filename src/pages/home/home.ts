@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ListComponent } from '../../components/list/list';
 import { DetailComponent } from '../../components/detail/detail';
 import { SearchPage } from '../search/search';
+import { CocktailItem } from '../../models/cocktail.model';
+import { CocktailServiceProvider } from '../../providers/cocktail-service/cocktail-service';
 
 @Component({
   selector: 'page-home',
@@ -10,11 +11,14 @@ import { SearchPage } from '../search/search';
 })
 export class HomePage {
 
+  public slideCocktails : CocktailItem[] = [];
   public buttonColor : string;
   public showSearchBar : boolean;
   public searchTerm : string;
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    public cocktailService : CocktailServiceProvider) {
     this.buttonColor = "aucalme";
     this.showSearchBar = false;
   }
@@ -23,20 +27,16 @@ export class HomePage {
     this.buttonColor = "danger";
   }
 
+  public ionViewDidLoad() {
+    this.cocktailService.getSlideCocktails().subscribe(c => this.slideCocktails = c);
+  }
+
   public go() : void {
     this.navCtrl.push(DetailComponent);
   }
 
   public searchButtonClick() : void {
     this.navCtrl.push(SearchPage);
-  }
-
-  public onSearchCancel($event) : void{
-    this.showSearchBar = false;
-  }
-
-  public onSearchInput($event) : void {
-    console.log("search");
   }
 
 }
