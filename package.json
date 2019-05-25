@@ -28,7 +28,6 @@
     "typescript": "~3.2.2",
     "zone.js": "~0.8.26",
     "express": "4.16.4"
-
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
