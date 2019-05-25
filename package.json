@@ -48,7 +48,7 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2",
-    "express": "14.0"
+    "express": "4.16.4"
   },
   "engines": {
     "node": "11.10.0",
