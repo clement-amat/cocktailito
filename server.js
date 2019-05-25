@@ -1,8 +1,11 @@
-//Install express server
-const express = require('express');
+var express = require('express');
+var http = require('http');
+var enforce = require('express-sslify');
 const path = require('path');
 
+
 const app = express();
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/CocktailitoGenesys'));

@@ -2,7 +2,7 @@
   "name": "cocktailito-genesys",
   "version": "0.0.0",
   "scripts": {
-    "preinstall" : "rm -rf dist",
+    "preinstall": "rm -rf dist",
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build --aot --prod",
@@ -27,7 +27,8 @@
     "tslib": "^1.9.0",
     "typescript": "~3.2.2",
     "zone.js": "~0.8.26",
-    "express": "4.16.4"
+    "express": "4.16.4",
+    "express-sslify": "^1.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
