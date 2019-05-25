@@ -22,13 +22,14 @@
     "@angular/pwa": "^0.12.4",
     "@angular/router": "~7.2.0",
     "@angular/service-worker": "~7.2.0",
+    "bulma": "^0.7.5",
     "core-js": "^2.5.4",
+    "express": "4.16.4",
+    "express-sslify": "^1.2.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "typescript": "~3.2.2",
-    "zone.js": "~0.8.26",
-    "express": "4.16.4",
-    "express-sslify": "^1.2.0"
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",

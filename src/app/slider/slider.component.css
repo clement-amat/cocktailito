@@ -1,0 +1,18 @@
+.slider {
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.slide {
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.slider > div {
+  /* CURRENT way. */
+  width: 100%;
+  scroll-snap-align: start;
+}
