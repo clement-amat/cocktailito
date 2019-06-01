@@ -1,10 +1,10 @@
 <div class="columns is-centered">
   <div class="column is-half-desktop">
-    <div class="swiper-container" [swiper]="config">
+    <div class="swiper-container" [(index)]="index" [swiper]="config">
       <div class="swiper-wrapper">
-        <div *ngFor="let slideItem of slides" class="swiper-slide">
+        <div *ngFor="let slideItem of slides; let i = index" class="swiper-slide">
           <img src="{{slideItem}}"/>
-          <div class="slide-text">
+          <div [@openClose]="i!=index ? 'open' : 'closed'" class="slide-text">
             <div class="slide-title">Espresso martini</div>
             <div class="slide-description">
               <div class="slide-description-item">Short Drink</div>
