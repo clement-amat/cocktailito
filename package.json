@@ -26,6 +26,8 @@
     "core-js": "^2.5.4",
     "express": "4.16.4",
     "express-sslify": "^1.2.0",
+    "hammerjs": "^2.0.8",
+    "ngx-swiper-wrapper": "^7.2.1",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "typescript": "~3.2.2",

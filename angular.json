@@ -137,5 +137,10 @@
       }
     }
   },
-  "defaultProject": "CocktailitoGenesys"
+  "defaultProject": "CocktailitoGenesys",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
