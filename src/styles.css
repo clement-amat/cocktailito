@@ -6,3 +6,10 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+
+
+.swiper-pagination-bullet-active {
+  background: black !important;
+  width: 10px;
+  height: 10px;
+}
