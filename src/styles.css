@@ -18,3 +18,10 @@ body {
   font-weight: bold;
   font-size: 1.2em;
 }
+
+.back-button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  opacity: .8;
+}
