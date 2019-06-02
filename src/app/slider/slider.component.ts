@@ -52,7 +52,7 @@ export class SliderComponent implements OnInit {
   };
 
   public slides: any[];
-  private index = 0;
+  public index = 0;
 
   ngOnInit(): void {
     this.slides = ['assets/stub/cocktail1.png', 'assets/stub/cocktail2.png'];
