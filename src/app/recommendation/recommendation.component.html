@@ -11,7 +11,9 @@
 </div>
 
 <div class="cards-container columns is-mobile">
-  <div *ngFor="let r of recommendations" class="column is-three-fifths-mobile is-one-fifth-desktop">
+  <div *ngFor="let r of recommendations"
+       routerLink="/detail/{{r.id}}"
+       class="column is-three-fifths-mobile is-one-fifth-desktop">
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">

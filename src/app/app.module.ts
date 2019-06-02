@@ -15,8 +15,8 @@ import { RecommendationComponent } from './recommendation/recommendation.compone
 
 
 const routes = [
-  {path: 'details', component: DetailComponent},
-  {path: '**', component: HomeComponent}
+  {path: 'detail/:id', component: DetailComponent, data: {animation: 'Details'}},
+  {path: '**', component: HomeComponent, data: {animation: 'Home'}}
 ]
 
 @NgModule({
@@ -25,7 +25,7 @@ const routes = [
     HomeComponent,
     DetailComponent,
     SliderComponent,
-    RecommendationComponent
+    RecommendationComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,5 +19,4 @@ export class RecommendationComponent implements OnInit {
       {id: 3, title: 'Blackberry Mojito', category: 'Long drink', family: 'Cocktail', imageUri: 'https://www.gogogogourmet.com/wp-content/uploads/2018/05/Blackberry-Mojito-5.jpg', rate: 4.3}
     ];
   }
-
 }
