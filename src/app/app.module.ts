@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { SliderComponent } from './slider/slider.component';
 import { SwiperModule} from 'ngx-swiper-wrapper';
+import { RecommendationComponent } from './recommendation/recommendation.component';
 
 
 const routes = [
@@ -23,7 +24,8 @@ const routes = [
     AppComponent,
     HomeComponent,
     DetailComponent,
-    SliderComponent
+    SliderComponent,
+    RecommendationComponent
   ],
   imports: [
     BrowserModule,

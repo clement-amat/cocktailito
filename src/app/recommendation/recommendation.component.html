@@ -1,0 +1,33 @@
+<div class="level is-mobile recommendation-title">
+  <div class="level-left section-title">
+    Recommended
+  </div>
+
+  <div class="level-right">
+    <div class="level-item">
+      <a href="#">View all <i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="cards-container columns is-mobile">
+  <div *ngFor="let r of recommendations" class="column is-three-fifths-mobile is-one-fifth-desktop">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img [src]="r.imageUri" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          <div class="card-title">{{r.title}}</div>
+          <div class="card-description">
+            <div class="card-description-item">{{r.category}}</div>
+            <div class="card-description-item">{{r.family}}</div>
+            <div class="card-description-item"><i class="fas fa-star"></i> {{r.rate}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

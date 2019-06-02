@@ -13,3 +13,8 @@ body {
   width: 10px;
   height: 10px;
 }
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}

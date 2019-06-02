@@ -1,0 +1,42 @@
+.recommendation-title {
+  margin-top: 1em;
+}
+
+.cards-container {
+  overflow-x: scroll;
+
+  .card {
+    border-radius: 12px;
+
+    .card-content {
+      padding: 0.8em;
+      font-size: 0.8em;
+
+      .card-title {
+        font-weight: bold;
+      }
+
+      .card-description {
+        display: flex;
+        color: #d4d4d4;
+        margin-top: 8px;
+
+        .card-description-item {
+          flex: auto;
+
+          i {
+            opacity: .7;
+            color: darkgoldenrod;
+          }
+        }
+      }
+    }
+  }
+
+  .card-image img {
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+}
