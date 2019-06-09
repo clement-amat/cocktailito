@@ -5,4 +5,5 @@ export interface Cocktail {
   category: string;
   family: string;
   rate: number;
+  description?: string;
 }

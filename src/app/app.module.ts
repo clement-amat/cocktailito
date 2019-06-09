@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,6 +12,7 @@ import { DetailComponent } from './detail/detail.component';
 import { SliderComponent } from './slider/slider.component';
 import { SwiperModule} from 'ngx-swiper-wrapper';
 import { RecommendationComponent } from './recommendation/recommendation.component';
+import {MyHammerConfig} from './config/hammer-configuration';
 
 
 const routes = [
@@ -35,6 +36,10 @@ const routes = [
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
   ],
   bootstrap: [AppComponent]
 })

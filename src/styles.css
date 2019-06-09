@@ -21,7 +21,14 @@ body {
 
 .back-button {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 1rem;
+  left: 1rem;
+  font-size:1rem;
+  z-index: 1000;
+
   opacity: .8;
+}
+
+.swiper-slide.ng-tns-c2-1.ng-star-inserted.swiper-slide-active {
+  width: 100% !important;
 }

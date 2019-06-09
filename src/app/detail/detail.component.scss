@@ -1,15 +1,70 @@
 .background-illustration {
   height: 50vh;
+  width: 100%;
   object-fit: cover;
+  transition: 1s;
+}
+
+.blur {
+  filter: blur(.4rem);
+  transition: (1s);
 }
 
 .recipe {
   background-color: white;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  position: absolute;
   width: 100%;
-  bottom: 6px;
-  padding: 16px;
-  padding-top: 32px;
+  padding: 32px 16px 16px;
+
+  $draggable-bar-width: 3rem;
+  .draggable-bar {
+    border: .2rem solid #e2e2e2;
+    background-color: #e2e2e2;
+    border-radius: 1rem;
+    width: $draggable-bar-width;
+    position: absolute;
+    top: 1rem;
+    left: calc(50% - (#{$draggable-bar-width}/2));
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: dimgrey;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .description {
+    text-align: justify;
+  }
+
+  .ingredients {
+    font-size: 0.8rem;
+    text-align: center;
+
+    .ingredient-illustration {
+      display: block;
+      margin: auto;
+      width: 2rem;
+    }
+  }
+}
+
+.recipe-up {
+  position: absolute;
+  top: 3rem;
+  border-radius: 0;
+  transition-duration: 0.4s;
+  height: 100%;
+}
+
+$top: 44vh;
+.recipe-down {
+  position: absolute;
+  top: $top;
+  max-height: 100vh - $top;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transition-duration: 0.4s;
+  overflow: hidden;
 }

@@ -1,9 +1,38 @@
 <div>
   <i (click)="back()" class="back-button fas fa-chevron-left"></i>
-  <img class="background-illustration" [src]="recipe.cocktail.imageUri" alt="Cocktail illustration"/>
-  <div class="recipe recipe-down">
+  <img class="background-illustration" [class.blur]="fullscreen" [src]="recipe.cocktail.imageUri" alt="Cocktail illustration"/>
+  <div #recipePanel
+       class="recipe"
+       [class.recipe-down]="!fullscreen"
+       [class.recipe-up]="fullscreen"
+       (panup)="onPanUp($event)"
+       (pandown)="onPanDown($event)">
+    <div class="draggable-bar"></div>
     <div class="title">
-      Good evening
+      {{recipe.cocktail.title}}
+    </div>
+    <div class="description">
+      <div class="subtitle">Introduce</div>
+      {{recipe.cocktail?.description}}
+    </div>
+
+    <div class="subtitle">Ingredients</div>
+    <div class="container">
+      <div class="columns is-mobile ingredients">
+        <div class="ingredient column is-one-third-mobile">
+          <img src="https://images.freshop.com/7355703/62f16ce5e4e0e6bc596a0a0a78d342dd_medium.png" class="ingredient-illustration">
+          400g. Blackberries
+        </div>
+        <div class="ingredient column is-one-third-mobile">
+          <img src="https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/256/256/true/eyJpZCI6ImNkM2JiYTc3OGNlNmI2OTFmZjgyYzI5ZDE5ZjI0NzVkLmpwZyIsInN0b3JhZ2UiOiJwdWJsaWNfc3RvcmUifQ?signature=68968332d5396338e748ec0b697dc3a3c36e6cf1ab0b42282b294c3e775c2741" class="ingredient-illustration">
+          2 Apples
+        </div>
+
+        <div class="ingredient column is-one-third-mobile">
+          <img src="https://www.gerrys.uk.com/content/images/thumbs/0001966_williams-elegant-crisp-gin-70cl_256.jpeg" class="ingredient-illustration">
+          25 ml. William’s Elegant Gin
+        </div>
+      </div>
     </div>
   </div>
 </div>
