@@ -26,16 +26,22 @@
     left: calc(50% - (#{$draggable-bar-width}/2));
   }
 
-  .subtitle {
+  .tabs {
+    margin-bottom: 1rem;
+  }
+
+  .subtitle, .tabs a {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: dimgrey;
     font-weight: bold;
     margin-top: 1rem;
   }
 
+
   .description {
     text-align: justify;
+    line-height: 1.2rem;
   }
 
   .ingredients {
@@ -48,6 +54,15 @@
       width: 2rem;
     }
   }
+    .directions {
+      ol li {
+        margin-left: 1rem;
+        text-align: justify;
+        line-height: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+    }
 }
 
 .recipe-up {

@@ -1,24 +1,32 @@
-<div>
+<div class="container">
   <i (click)="back()" class="back-button fas fa-chevron-left"></i>
   <img class="background-illustration" [class.blur]="fullscreen" [src]="recipe.cocktail.imageUri" alt="Cocktail illustration"/>
   <div #recipePanel
        class="recipe"
        [class.recipe-down]="!fullscreen"
-       [class.recipe-up]="fullscreen"
-       (panup)="onPanUp($event)"
-       (pandown)="onPanDown($event)">
-    <div class="draggable-bar"></div>
-    <div class="title">
-      {{recipe.cocktail.title}}
-    </div>
-    <div class="description">
-      <div class="subtitle">Introduce</div>
-      {{recipe.cocktail?.description}}
+       [class.recipe-up]="fullscreen">
+    <div (panup)="onPanUp($event)"
+         (pandown)="onPanDown($event)">
+      <div class="draggable-bar"></div>
+      <div class="title">
+        {{recipe.cocktail.title}}
+      </div>
+      <div class="description">
+        <div class="subtitle">Introduce</div>
+        {{recipe.cocktail?.description}}
+      </div>
+
+      <div class="tabs is-centered">
+        <ul>
+          <li (click)="changeTab('ingredients')" [class.is-active]="selectedTab == 'ingredients'"><a>Ingredients</a></li>
+          <li (click)="changeTab('directions')" [class.is-active]="selectedTab == 'directions'"><a>Directions</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="subtitle">Ingredients</div>
-    <div class="container">
-      <div class="columns is-mobile ingredients">
+
+    <div [hidden]="selectedTab !== 'ingredients'" class="container">
+      <div  class="columns is-mobile ingredients">
         <div class="ingredient column is-one-third-mobile">
           <img src="https://images.freshop.com/7355703/62f16ce5e4e0e6bc596a0a0a78d342dd_medium.png" class="ingredient-illustration">
           400g. Blackberries
@@ -32,6 +40,18 @@
           <img src="https://www.gerrys.uk.com/content/images/thumbs/0001966_williams-elegant-crisp-gin-70cl_256.jpeg" class="ingredient-illustration">
           25 ml. William’s Elegant Gin
         </div>
+      </div>
+    </div>
+    <div [hidden]="selectedTab !== 'directions'" class="container">
+      <div class="directions">
+        <ol>
+          <li>Muddle the lime juice, sugar and mint leaves in a small jug, crushing the mint as you go – you can use the end of a rolling pin for this. Pour into a tall glass and add a handful of ice.</li>
+          <li>Pour over the rum, stirring with a long-handled spoon. Top up with soda water, garnish with mint and serve.</li>
+          <li>Muddle the lime juice, sugar and mint leaves in a small jug, crushing the mint as you go – you can use the end of a rolling pin for this. Pour into a tall glass and add a handful of ice.</li>
+          <li>Pour over the rum, stirring with a long-handled spoon. Top up with soda water, garnish with mint and serve.</li>
+          <li>Muddle the lime juice, sugar and mint leaves in a small jug, crushing the mint as you go – you can use the end of a rolling pin for this. Pour into a tall glass and add a handful of ice.</li>
+          <li>Pour over the rum, stirring with a long-handled spoon. Top up with soda water, garnish with mint and serve.</li>
+        </ol>
       </div>
     </div>
   </div>

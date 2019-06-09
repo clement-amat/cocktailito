@@ -14,7 +14,7 @@ export class DetailComponent implements OnInit {
   @ViewChild('recipePanel') recipePanel: ElementRef;
   public recipe: Recipe;
   public fullscreen = false;
-  public  animationState = 'out';
+  public  selectedTab = 'ingredients';
 
   constructor(
     private location: Location
@@ -43,12 +43,18 @@ export class DetailComponent implements OnInit {
 
   public onPanUp(event) {
     this.fullscreen = true;
-    this.animationState = 'in';
   }
 
   public onPanDown(event) {
     this.fullscreen = false;
-    this.animationState = 'out';
+  }
+
+  onPanDirections(event) {
+    event.preventDefault();
+  }
+
+  public changeTab(tabName: string): void {
+    this.selectedTab = tabName;
   }
 
 }
