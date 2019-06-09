@@ -1,3 +1,5 @@
+@import "~src/theme";
+
 .background-illustration {
   height: 50vh;
   width: 100%;
@@ -28,12 +30,16 @@
 
   .tabs {
     margin-bottom: 1rem;
+
+    li.is-active a {
+      border-bottom-color: $primary;
+    }
   }
 
   .subtitle, .tabs a {
     text-transform: uppercase;
     font-size: 1rem;
-    color: dimgrey;
+    color: $secondary;
     font-weight: bold;
     margin-top: 1rem;
   }
@@ -55,13 +61,38 @@
     }
   }
     .directions {
-      ol li {
-        margin-left: 1rem;
-        text-align: justify;
-        line-height: 1.2rem;
-        margin-bottom: 1rem;
+      ol {
+        counter-reset: li;
+        list-style: none;
+        margin-bottom: 4em;
       }
 
+      ol li {
+        position: relative;
+        display: block;
+        padding-left: 2rem;
+        margin: 1em;
+        text-align: justify;
+        line-height: 1.2rem;
+      }
+
+      ol li:before {
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        left: -1.3em;
+        top: 50%;
+        margin-top: -1.3em;
+        color: white;
+        height: 2em;
+        width: 2em;
+        border: .3em solid #fff;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2em;
+        transition: all .3s ease-out;
+        background-image: $primary_gradient;
+      }
     }
 }
 

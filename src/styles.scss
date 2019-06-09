@@ -1,3 +1,5 @@
+@import "~src/theme";
+
 @font-face {
   font-family: "Lato";
   src: url("assets/fonts/Lato-Regular.ttf");
@@ -7,6 +9,9 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+a {
+  color: $secondary !important;
+}
 
 .swiper-pagination-bullet-active {
   background: black !important;
@@ -28,6 +33,11 @@ body {
   opacity: .8;
 }
 
+.fa-icon {
+  margin-right: .2rem !important;
+}
+
 .swiper-slide.ng-tns-c2-1.ng-star-inserted.swiper-slide-active {
   width: 100% !important;
 }
+
